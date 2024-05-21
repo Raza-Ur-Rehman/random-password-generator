@@ -13,11 +13,15 @@
 
 <body>
     <div class="container">
-        <h1>Generate a <br>Strong Password</h1>
+        <h1>Generate a <br><span>Strong</span> Password</h1>
         <div class="input-box">
-            <p id="display"><i class="fa-solid fa-trash"></i></p>
-            <button class="btn" onclick="randomGenerate();">Generate</button>
+            <p id="display"></p>
+            <div class="icon">
+                <i class="fa-solid fa-copy " onclick="copyText();"></i>
+                <i class="fa-solid fa-trash " onclick="clearText();"></i>
+            </div>
         </div>
+        <button class="btn" onclick="randomGenerate();">Generate</button>
         
     </div>
     <script src="app.js"></script>
