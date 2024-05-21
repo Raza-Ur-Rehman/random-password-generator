@@ -6,7 +6,7 @@
 //         emailValidation(email)
 //     }
 // }
-let display = document.getElementById("display");
+var display = document.getElementById("display");
 let uppercase = [
     "a",
     "b",
@@ -98,19 +98,26 @@ let specialCharacters = [
     "`",
 ];
 let number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-let getAll = uppercase + lowercase + specialCharacters + number ;
+let getAll = uppercase + lowercase + specialCharacters + number;
 
 function randomGenerate() {
     let password = "";
-    password += uppercase[Math.floor(Math.random()*uppercase.length)];
-    password += lowercase[Math.floor(Math.random()*lowercase.length)];
-    password += specialCharacters[Math.floor(Math.random()*specialCharacters.length)];
-    password += number[Math.floor(Math.random()*number.length)];
+    password += uppercase[Math.floor(Math.random() * uppercase.length)];
+    password += lowercase[Math.floor(Math.random() * lowercase.length)];
+    password += specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
+    password += number[Math.floor(Math.random() * number.length)];
 
-    for(let i = 1; i <= password.length ; i++){
-        getAll.length >= 8;
-        getAll += password[Math.random() * getAll.length]; 
-         display.innerText = password ; 
+    for (let i = 1; i <= password.length ; i++) {
+        getAll += password[Math.random() * getAll.length];
+        display.innerText = password;
         //  console.log([i]);
-        } 
- }
+    }
+}
+function copyText() { 
+    display.select();
+    document.execCommand("copy");
+} 
+
+function clearText() {
+    display = ""
+}
