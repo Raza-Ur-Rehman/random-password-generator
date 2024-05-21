@@ -82,4 +82,13 @@ body {
     outline: none;
     color: #fff;
 }
+#copyright {
+    display: block;
+    position: absolute;
+    bottom: 100px;
+    right: 220px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
 

@@ -101,22 +101,20 @@ let number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 let getAll = uppercase + lowercase + specialCharacters + number;
 
 function randomGenerate() {
-    let password = " ";
-    password += uppercase[Math.floor(Math.random(2) * uppercase.length)];
-    password += lowercase[Math.floor(Math.random(2) * lowercase.length)];
-    password += specialCharacters[Math.floor(Math.random(2) * specialCharacters.length)];
-    password += number[Math.floor(Math.random(2) * number.length)];
+    let password = "";
+    password += uppercase[Math.floor(Math.random() * uppercase.length)];
+    password += lowercase[Math.floor(Math.random() * lowercase.length)];
+    password += specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
+    password += number[Math.floor(Math.random() * number.length)];
 
-    for (let i = 1; i <= pasward.length ; i++) {
-        getAll += password[Math.floor(Math.random() * getAll.length)];
+    for (let i = 1; i <= password.length ; i++) {
+        getAll += password[Math.floor(Math.random(8) * getAll.length)];
         display.innerText = password;
-        //  console.log([i]);
     }
 }
-function copyText() { 
-    display.select()
-    document.execCommand("display");
-} 
+function copy(){
+    navigator.clipboard.writeText(display); 
+}
 
 function clearText() {
     display.innerText = "";
