@@ -6,114 +6,24 @@
 //         emailValidation(email)
 //     }
 // }
-var display = document.getElementById("display");
-let uppercase = [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i",
-    "j",
-    "k",
-    "l",
-    "m",
-    "n",
-    "o",
-    "p",
-    "q",
-    "r",
-    "s",
-    "t",
-    "u",
-    "v",
-    "w",
-    "x",
-    "y",
-    "z",
-];
-let lowercase = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z",
-];
-let specialCharacters = [
-    "!",
-    "@",
-    "#",
-    "$",
-    "%",
-    "^",
-    "&",
-    "*",
-    "(",
-    ")",
-    "-",
-    "_",
-    "=",
-    "+",
-    "[",
-    "]",
-    "{",
-    "}",
-    "\\",
-    "|",
-    ";",
-    ":",
-    "'",
-    '"',
-    ",",
-    ".",
-    "<",
-    ">",
-    "/",
-    "?",
-    "~",
-    "`",
-];
-let number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-let getAll = uppercase + lowercase + specialCharacters + number;
+let passwordStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}|;:,.<>?";
+let password = "";
 
 function randomGenerate() {
-    let password = "";
-    password += uppercase[Math.floor(Math.random() * uppercase.length)];
-    password += lowercase[Math.floor(Math.random() * lowercase.length)];
-    password += specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
-    password += number[Math.floor(Math.random() * number.length)];
+    let display = document.getElementById("display");
+    password = "";
+    // password += passwordStr[Math.floor(Math.random(8) * passwordStr.length)];
 
-    for (let i = 1; i <= password.length ; i++) {
-        getAll += password[Math.floor(Math.random(8) * getAll.length)];
-        display.innerText = password;
+    for (let i = 0; i <= 7 ; i++) {
+        // passwordStr += password[Math.floor(Math.random(8) * passwordStr.length)];
+        // display.innerText = password;
+        let genRandom = passwordStr[Math.floor(Math.random() * passwordStr.length)];
+        password += genRandom;
     }
+    display.innerText = password;
 }
 function copy(){
-    navigator.clipboard.writeText(display); 
+    navigator.clipboard.writeText(display.innerText); 
 }
 
 function clearText() {
