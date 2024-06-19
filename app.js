@@ -24,6 +24,14 @@ function randomGenerate() {
 }
 function copy(){
     navigator.clipboard.writeText(display.innerText); 
+    Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Your work has been saved",
+        showConfirmButton: false,
+        timer: 1500
+      });
+    // alert("hogaya");
 }
 
 function clearText() {
