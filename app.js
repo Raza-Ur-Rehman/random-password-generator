@@ -25,7 +25,7 @@ function copy(){
         timer: 1500
       }
     );
-    // alert("hogaya");
+    alert("hogaya");
 }
 
 function clearText() {
