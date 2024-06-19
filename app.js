@@ -1,11 +1,3 @@
-// function validationpassword() {
-//     let password = prompt("Enter a password");
-//     if (password.length > 8) {
-//         console.log("yes ok hai");
-//         let email = prompt("Enter your email address");
-//         emailValidation(email)
-//     }
-// }
 let passwordStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}|;:,.<>?";
 let password = "";
 
@@ -24,13 +16,15 @@ function randomGenerate() {
 }
 function copy(){
     navigator.clipboard.writeText(display.innerText); 
-    Swal.fire({
-        position: "top-end",
+    Swal.fire(
+        {
+        position: "center",
         icon: "success",
-        title: "Your work has been saved",
-        showConfirmButton: false,
+        title: "Copied your Password",
+        // showConfirmButton: true,
         timer: 1500
-      });
+      }
+    );
     // alert("hogaya");
 }
 
