@@ -16,6 +16,8 @@ body {
     background-image: url(image/background.avif);
     background-repeat: no-repeat;
     background-size: cover;
+    object-fit: cover;
+    overflow: hidden;
     /* background-image: linear-gradient(to left bottom, #0a48a7, #0f3ea3, #4c3cc4, #7339e1); */
 }
 .container {
