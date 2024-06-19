@@ -16,15 +16,15 @@ function randomGenerate() {
 }
 function copy(){
     navigator.clipboard.writeText(display.innerText); 
-    Swal.fire(
-        {
-        position: "center",
-        icon: "success",
-        title: "Copied your Password",
-        // showConfirmButton: true,
-        timer: 1500
-      }
-    );
+    // Swal.fire(
+    //     {
+    //     position: "center",
+    //     icon: "success",
+    //     title: "Copied your Password",
+    //     // showConfirmButton: true,
+    //     timer: 1500
+    //   }
+    // );
     alert("hogaya");
 }
 
